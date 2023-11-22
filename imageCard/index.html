@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="user_page_1">
+        <div id="card_1">
+            <div id="square_1">
+                <img src="./hand.jpg">
+            </div>
+            <input type="file" id="input_1"/>
+
+            <script>
+                var image_1 = document.querySelector('img');
+                console.log(image_1);
+                var input_1 = document.querySelector('[type="file"]');
+                console.log(input_1);
+                image_1.addEventListener('click', ()=>{
+                    input_1.click()
+                })
+                input_1.onchange = ()=>{
+                    image_1.src = URL.createObjectURL(input_1.files[0]);
+                }
+            </script>
+
+            <h3 id="name_1">name</h3>
+        </div>
+    </div>
+</body>
+</html>
