@@ -1,153 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../static/main.css">
-
-</head>
-<body>
-    <!-- <div style="display: flex;"> -->
-    <div style="float: left;">
-        <canvas style="margin-right: 3rem; background-color: black;" ></canvas>
-    </div>
-    
-
-    <!-- Tab links -->
-    <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">Angle</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Speed</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Start point & End point</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">select</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">frames</button>
-    </div>
-    
-    <!-- Tab content -->
-    <div id="London" class="tabcontent" style="background-color: aqua;">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
-
-        <form>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-1]-</label>
-                <input id="input_angle_1" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_1" style="height: 2rem;">apply</button>
-            </div>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-2]-</label>
-                <input id="input_angle_2" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_2" style="height: 2rem;">apply</button>
-            </div>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-3]-</label>
-                <input id="input_angle_3" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_3" style="height: 2rem;">apply</button>
-            </div>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-4]-</label>
-                <input id="input_angle_4" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_4" style="height: 2rem;">apply</button>
-            </div>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-5]-</label>
-                <input id="input_angle_5" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_5" style="height: 2rem;">apply</button>
-            </div>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-6]-</label>
-                <input id="input_angle_6" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_6" style="height: 2rem;">apply</button>
-            </div>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-7]-</label>
-                <input id="input_angle_7" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_7" style="height: 2rem;">apply</button>
-            </div>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-8]-</label>
-                <input id="input_angle_8" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_8" style="height: 2rem;">apply</button>
-            </div>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-9]-</label>
-                <input id="input_angle_9" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_9" style="height: 2rem;">apply</button>
-            </div>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-10]-</label>
-                <input id="input_angle_10" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_10" style="height: 2rem;">apply</button>
-            </div>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-11]-</label>
-                <input id="input_angle_11" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_11" style="height: 2rem;">apply</button>
-            </div>
-    
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[item-12]-</label>
-                <input id="input_angle_12" style="height: 2rem;">
-                <button class="btn_angle_cls" type="button" id="btn_angle_12" style="height: 2rem;">apply</button>
-            </div>
-
-            <div style="padding: 0.25rem;">
-                <label style="height: 2rem;">[All items]-</label>
-                <input id="input_angle" style="height: 2rem;">
-                <button type="button" id="btn_angle" style="height: 2rem;">apply</button>
-            </div>
-        </form>
-        
-
-
-    </div>
-    
-    <div id="Paris" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
-    </div>
-    
-    <div id="Tokyo" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
-    </div>
-
-    <script>
-        function openCity(evt, cityName) {
-            // Declare all variables
-            var i, tabcontent, tablinks;
-
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+		</style>
+        <script type="importmap">
+            {
+              "imports": {
+                "three": "https://unpkg.com/three@v0.159.0/build/three.module.js"
+              }
             }
+          </script>
+	</head>
+	<body>
+        <button id="btn_1" type="button" style="padding: 2rem; font-size: 2rem; background-color: coral;" >rotate/stop 1</button>
+        <button id="btn_2" type="button" style="padding: 2rem; font-size: 2rem; background-color: coral;" >rotate/stop 2</button>
+        <button id="btn_3" type="button" style="padding: 2rem; font-size: 2rem; background-color: coral;" >rotate/stop 3</button>
+		<script type="module" src="/main.js"></script>
 
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Show the current tab, and add an "active" class to the button that opened the tab
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-        document.getElementById('London').style.display = "block";
-    </script>
-
-    <script src="../static/canvas_listener.js" type="module"></script>
-</body>
+	</body>
 </html>
