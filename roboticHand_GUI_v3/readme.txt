@@ -1,1 +1,0 @@
-Dashboard in javascript.
